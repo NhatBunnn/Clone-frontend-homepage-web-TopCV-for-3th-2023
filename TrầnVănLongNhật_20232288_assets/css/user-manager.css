@@ -1,0 +1,105 @@
+.user-manager{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4); 
+    animation: settingUI-opacity ease-out 0.3s;
+    display: none;
+    z-index: 2;
+}
+
+.user-manager .user-manager-container{
+    min-height: 400px;
+    background-color: var(--unchanged-lightWhite-UIColor);
+    padding: 20px;
+    border-radius: var(--border-radius-container);
+    position: relative; 
+}
+
+.user-manager table{
+    border-spacing: 0;
+}
+
+.user-manager .user-manager-thead{
+    background: linear-gradient(to left, var(--green-UISlider1), var(--green-UISlider2) 40%);
+}
+
+.user-manager .user-manager-thead th{
+    border-bottom: 1px solid #e9eaeccb;
+    text-align: left;
+    line-height: 45px;
+    color: var(--unchanged-white-textColor);
+    font-weight: normal;
+    padding-right: calc(201px - 15px);
+    padding-left: 8px;
+}
+
+.user-manager .usermanager-title{
+    font-size: 22px;
+    padding-bottom: 20px;
+    color: var(--green-textColor);
+}
+
+.user-manager .user-manager-thead th:first-child{
+    text-align: center !important;
+    padding: 0px 15px !important;
+}
+
+@keyframes user-manager-items{
+    from{
+        outline: 1px solid var(--green-UIOutLine1);
+        box-shadow: rgba(0, 0, 0, 0) 0px 5px 15px;
+    }
+    to{
+        outline: 1px solid var(--green-UIOutLine2);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+}
+
+.user-manager .user-manager-tbody tr{
+    cursor: pointer;
+}
+
+.user-manager .user-manager-tbody tr:hover{
+    animation: user-manager-items ease 1s;
+    animation-fill-mode: forwards;
+}
+
+.user-manager .user-manager-tbody td{
+    padding-right: 15px;
+    line-height: 39px;
+    color: var(--unchanged-lightDark-textColor);
+    border-bottom: 1px solid #e9eaeccb;
+    font-size: 14px;
+}
+
+.user-manager .user-manager-tbody td:first-child{
+    text-align: center;
+    padding-right: 0px !important;
+}
+
+.user-manager .user-manager-container ti:hover{
+    background-color: #e01627;
+    border-top-right-radius: var(--border-radius-container);
+}
+
+.user-manager .user-manager-container ti{
+    cursor: pointer;
+    padding: 9px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+
+
+
+
+

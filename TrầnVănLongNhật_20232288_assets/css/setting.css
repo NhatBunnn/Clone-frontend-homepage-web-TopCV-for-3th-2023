@@ -1,0 +1,154 @@
+@keyframes setting-move-right {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(74px);
+    }
+}
+
+.setting:hover{
+    animation: setting-move-right ease-out 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.setting{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 213px;
+    left: -110px;
+    background-color: var(--unchanged-white-UIColor);
+    border-radius: 20px;
+    padding: 5px 11px 5px 50px; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.setting img{
+    width: 20px;
+}
+
+.setting p:hover{
+    color: var(--main-text-color);
+}
+
+.setting p{
+    padding-right: 11px;
+    cursor: pointer;
+}
+
+/* UI - SETTING */
+@keyframes settingUI-move-top {
+    from{
+        opacity: 0;
+        transform: translateY(101px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes settingUI-opacity{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    } 
+}
+
+.UIsetting{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4); 
+    animation: settingUI-opacity ease-out 0.3s;
+    z-index: 2;
+}
+
+.UIsetting-container{
+    animation: settingUI-move-top ease-out 0.3s;
+}
+
+.UIsetting-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.UIsetting-header .UIsetting-close:hover{
+    background-color: #e01627;
+}
+
+.UIsetting-header .UIsetting-close{
+    padding: 5px;
+    border-radius: 22px;
+    cursor: pointer;
+}
+
+.UIsetting-header p{
+    font-size: 17px;
+    color: var(--unchanged-green-textColor);
+}
+
+.UIsetting-container{
+    width: 780px;
+    background-color: var(--unchanged-lightWhite-UIColor);
+    padding: 20px 20px 25px 20px;
+    border-radius: 12px;
+}
+
+.UIsetting-content{
+    border-radius: 10px;
+    background-color: var(--unchanged-white-UIColor);
+    height: 300px;
+}
+
+.UIsetting-feature li{
+    list-style-type: none;
+    width: 211px;
+    line-height: 45px;
+    padding-left: 11px;
+    cursor: pointer;
+}
+
+.UIsetting-feature li:hover .option-feature{
+    display: block;
+}
+
+.UIsetting-feature{
+    position: relative;
+}
+
+.option-feature{
+    position: absolute;
+    left: 211px;
+    top: 0;
+    display: none;
+}
+
+.UIsetting-footer{
+    margin-top: 10px;
+}
+
+.UIsetting-footer p{
+    background-color: var(--unchanged-green-textColor);
+    display: inline-block;
+    padding: 5px 11px;
+    color: var(--unchanged-white-textColor);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.UIsetting-footer p:hover{
+    background-color: var(--unchanged-lightDark-textColor);
+}
